@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Beast Unchained — Official Lyric Video | Beltane Studios</title>
+<style>
+  :root{
+    --bg:#050505; --panel:#0d0d0f; --line:#26262a; --red:#e10600; --ember:#ff6a00;
+    --gold:#ffb347; --text:#f2f2f2; --muted:#9a9aa3;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:radial-gradient(1200px 600px at 50% -10%, #1a0a08 0%, var(--bg) 55%);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;min-height:100vh}
+  a{color:var(--gold)}
+  .wrap{max-width:1180px;margin:0 auto;padding:22px 18px 60px}
+  .kicker{letter-spacing:.28em;text-transform:uppercase;font-size:11px;color:var(--muted);text-align:center}
+  h1{font-size:clamp(34px,6vw,72px);line-height:.95;margin:10px 0 6px;text-align:center;font-weight:900;letter-spacing:-.02em;text-transform:uppercase}
+  h1 .red{color:var(--red);text-shadow:0 0 30px rgba(225,6,0,.55)}
+  .sub{text-align:center;color:var(--muted);margin:0 0 18px}
+  .badge{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);background:#111;border-radius:999px;padding:6px 12px;font-size:12px;color:#ddd}
+  .badge i{width:8px;height:8px;border-radius:50%;background:var(--red);box-shadow:0 0 12px var(--red);display:inline-block}
+  .stage-shell{position:relative;margin:18px auto 0;max-width:1080px}
+  .stage{position:relative;aspect-ratio:16/9;background:#000;border:1px solid #2a2a2e;border-radius:18px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.6), 0 0 0 1px rgba(255,106,0,.08)}
+  .stage.vertical{aspect-ratio:9/16;max-width:420px;margin:0 auto}
+  .stage img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55;filter:saturate(1.15) contrast(1.1);animation:kenburns 24s ease-in-out infinite alternate}
+  @keyframes kenburns{from{transform:scale(1) translateY(0)}to{transform:scale(1.12) translateY(-2%)}}
+  .stage .vignette{position:absolute;inset:0;background:radial-gradient(ellipse at center, transparent 35%, rgba(0,0,0,.75) 100%), linear-gradient(to top, rgba(0,0,0,.85), transparent 45%, rgba(0,0,0,.55));pointer-events:none}
+  #embers{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+  #flash{position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none}
+  .topbar{position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:14px 16px;z-index:5}
+  .section-tag{font-size:11px;letter-spacing:.22em;text-transform:uppercase;background:rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.14);padding:6px 10px;border-radius:999px;backdrop-filter:blur(6px)}
+  .logo{font-weight:800;letter-spacing:.18em;font-size:12px;text-transform:uppercase;color:#fff;opacity:.9}
+  .lyric-box{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 24px 70px;z-index:4}
+  .lyric-kicker{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+  #lyricMain{font-size:clamp(28px,5.2vw,64px);font-weight:900;line-height:1.02;text-transform:uppercase;letter-spacing:-.01em;text-shadow:0 4px 30px rgba(0,0,0,.9);max-width:900px}
+  #lyricMain .beast{color:var(--red);text-shadow:0 0 24px rgba(225,6,0,.8), 0 4px 30px rgba(0,0,0,.9)}
+  #lyricSub{margin-top:14px;color:#d8d8de;font-size:clamp(14px,1.6vw,19px);max-width:720px;line-height:1.4}
+  .progress-wrap{position:absolute;left:0;right:0;bottom:0;padding:14px 16px 16px;z-index:6;background:linear-gradient(to top, rgba(0,0,0,.85), transparent)}
+  .progress{height:8px;background:rgba(255,255,255,.14);border-radius:999px;overflow:hidden;cursor:pointer}
+  .progress-fill{height:100%;width:0%;background:linear-gradient(90deg,var(--red),var(--ember),var(--gold));box-shadow:0 0 14px rgba(255,106,0,.7)}
+  .time-row{display:flex;justify-content:space-between;font-size:12px;color:#cfcfd6;margin-top:8px;font-variant-numeric:tabular-nums}
+  .shake{animation:shake .35s ease}
+  @keyframes shake{0%,100%{transform:translate(0,0)}20%{transform:translate(-6px,3px)}40%{transform:translate(6px,-3px)}60%{transform:translate(-4px,-2px)}80%{transform:translate(4px,2px)}}
+  .controls{margin:16px auto 0;max-width:1080px;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:14px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+  button{appearance:none;border:1px solid #333;background:#16161a;color:#fff;border-radius:999px;padding:10px 16px;font-weight:700;cursor:pointer}
+  button.primary{background:var(--red);border-color:var(--red);box-shadow:0 8px 24px rgba(225,6,0,.35)}
+  button:hover{filter:brightness(1.15)}
+  button.active{outline:2px solid var(--gold);outline-offset:2px}
+  input[type="text"],input[type="url"]{flex:1;min-width:220px;background:#0a0a0c;border:1px solid #2c2c31;color:#fff;border-radius:999px;padding:10px 14px}
+  label.file{border:1px dashed #3a3a40;border-radius:999px;padding:10px 14px;cursor:pointer;color:#ddd;background:#0f0f12}
+  .hint{color:var(--muted);font-size:13px;line-height:1.5}
+  .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:16px;margin-top:16px}
+  @media(max-width:900px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px}
+  .card h2{margin:0 0 10px;font-size:16px;letter-spacing:.08em;text-transform:uppercase}
+  .lyrics-list{max-height:420px;overflow:auto;padding-right:6px}
+  .lyric-line{padding:8px 10px;border-radius:10px;cursor:pointer;color:#bdbdc6;line-height:1.35}
+  .lyric-line:hover{background:#15151a}
+  .lyric-line.active{background:#1d0d0b;color:#fff;border:1px solid rgba(225,6,0,.45)}
+  .lyric-line .t{font-size:11px;color:var(--gold);font-variant-numeric:tabular-nums;margin-right:8px}
+  .viz-wrap{height:120px;background:#070708;border:1px solid #222;border-radius:12px;overflow:hidden}
+  canvas#viz{width:100%;height:100%;display:block}
+  .pill-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+  .pill{font-size:12px;border:1px solid #2c2c31;border-radius:999px;padding:6px 10px;color:#ddd;background:#0f0f12}
+  footer{color:var(--muted);text-align:center;font-size:12px;margin-top:22px}
+  kbd{background:#1c1c20;border:1px solid #333;border-bottom-width:2px;border-radius:6px;padding:2px 6px;font-size:11px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="kicker">Beltane Studios &nbsp;•&nbsp; Official Lyric Video v2</div>
+  <h1>The Beast <span class="red">Unchained</span></h1>
+  <p class="sub">DeathPiggy • C# 80s galloping metal • 3:27 • Synced lyrics, ember particles, beat pulse &amp; visualizer. Drop in your Suno master and hit play.</p>
+  <div style="text-align:center"><span class="badge"><i></i> LIVE PREVIEW — press play, then fullscreen to record</span></div>
+
+  <div class="stage-shell">
+    <div class="stage" id="stage">
+      <img class="bg" id="bgImg" src="assets/beast-eyes.jpg" alt="The Beast">
+      <canvas id="embers"></canvas>
+      <div class="vignette"></div>
+      <div id="flash"></div>
+      <div class="topbar">
+        <div class="logo">BELTANE STUDIOS</div>
+        <div class="section-tag" id="sectionTag">INTRO</div>
+      </div>
+      <div class="lyric-box">
+        <div class="lyric-kicker" id="lyricKicker">THE BEAST AWAKENS</div>
+        <div id="lyricMain">THIS FUCKING <span class="beast">BEAST!</span></div>
+        <div id="lyricSub">Press play — lyrics sync to the track. Drop your audio file below for real sync + visualizer.</div>
+      </div>
+      <div class="progress-wrap">
+        <div class="progress" id="progress"><div class="progress-fill" id="progressFill"></div></div>
+        <div class="time-row"><span id="curTime">0:00</span><span id="durTime">3:27 (demo)</span><span>SPACE = play / pause</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button class="primary" id="playBtn">▶ Play</button>
+    <button id="restartBtn">↺ Restart</button>
+    <button id="hookBtn">🔁 Hook 15s</button>
+    <button id="fsBtn">⛶ Fullscreen</button>
+    <button id="vertBtn">9:16 Vertical</button>
+    <button id="demoBtn" class="active">Demo Sync: ON</button>
+    <label class="file">📁 Load audio <input type="file" id="audioFile" accept="audio/*" hidden></label>
+    <input type="url" id="audioUrl" placeholder="…or paste audio URL (mp3 / wav)">
+    <button id="loadUrlBtn">Load URL</button>
+    <button id="srtBtn">⬇ SRT</button>
+    <button id="nudgeBack">−0.5s</button>
+    <button id="nudgeFwd">+0.5s</button>
+    <span class="hint" id="audioStatus">No audio loaded — running in <b>Demo Sync</b> so you can preview the full video. Load your Suno export for true sync.</span>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Synced Lyrics — click to seek</h2>
+      <div class="lyrics-list" id="lyricsList"></div>
+      <p class="hint" style="margin-top:10px">Timings rescaled to the true <b>3:27</b> Suno master. Once you load the audio, nudge with <b>−0.5s / +0.5s</b> until the words land, then <b>⬇ SRT</b> to export. Full lyrics: <code>beast-video/LYRICS.md</code>.</p>
+    </div>
+    <div class="card">
+      <h2>Audio Visualizer</h2>
+      <div class="viz-wrap"><canvas id="viz" width="600" height="120"></canvas></div>
+      <div class="pill-row">
+        <span class="pill">🔥 Ember particles</span><span class="pill">💥 BEAST! shake + flash</span><span class="pill">🎸 Gallop bars</span><span class="pill">📱 9:16 for Reels / TikTok</span><span class="pill">🔁 Hook loop</span>
+      </div>
+      <h2 style="margin-top:16px">How to export</h2>
+      <p class="hint">1) Load audio → Play → Fullscreen.<br>2) Screen-record (OBS / QuickTime / phone).<br>3) Toggle <b>9:16 Vertical</b> for Shorts/Reels/TikTok, or <b>🔁 Hook 15s</b> for the loop.<br>4) For a true MP4 render, use <code>beast-video/render.py</code> (needs ffmpeg on your machine).<br>5) Posting copy: <code>beast-video/POSTING.md</code> • Thumbnail: <code>beast-video/thumbnail.html</code></p>
+      <p class="hint">Suno source: <a href="https://suno.com/s/i0pvQoQsCjuWwhFT" target="_blank" rel="noopener">suno.com/s/i0pvQoQsCjuWwhFT</a> — “The Beast Unchained” by DeathPiggy</p>
+    </div>
+  </div>
+
+  <footer>Beltane Studios — “The Beast Unchained” lyric video v2 • Built in-repo, ready to record</footer>
+</div>
+
+<audio id="audio" preload="metadata"></audio>
+
+<script>
+/* ============ TIMED LYRICS — rescaled to true 3:27 (207s) master ============ */
+const DEMO_DURATION = 207; // 3:27
+const CUES = [
+  {t:0,   section:"INTRO", main:'THIS FUCKING <span class="beast">BEAST!</span>', sub:"Guttural scream tears through galloping guitar riffs and pounding drums", kicker:"THE BEAST AWAKENS"},
+  {t:8,   section:"VERSE 1", main:"The iron snaps, the shadows rise", sub:"You stoked the flames with all your lies", kicker:"VERSE 1"},
+  {t:13,  section:"VERSE 1", main:"The hunger grows, it burns the night", sub:"You called it forth — now face the fight!", kicker:"VERSE 1"},
+  {t:19,  section:"VERSE 1", main:'(The beast!) <span class="beast">This fucking beast!</span>', sub:"Its fangs are bare, the air grows thin", kicker:"VERSE 1"},
+  {t:24,  section:"VERSE 1", main:"No turning back, it’s crawling in", sub:"A quiet roar becomes a flood", kicker:"VERSE 1"},
+  {t:30,  section:"VERSE 1", main:"You’re drowning now in your own blood —", sub:'(The beast!) <b>This fucking beast!</b>', kicker:"VERSE 1"},
+  {t:36,  section:"CHORUS", main:"Don’t mistake my kindness for weakness!", sub:"The beast inside will leave you speechless!", kicker:"CHORUS", shake:true},
+  {t:41,  section:"CHORUS", main:"It’s awake, it thrives on pain —", sub:"No mercy now, the beast unchained!", kicker:"CHORUS"},
+  {t:47,  section:"CHORUS", main:'This fucking beast! (The beast!)', sub:'<span class="beast" style="color:#e10600;font-weight:900">This fucking beast!</span>', kicker:"CHORUS", shake:true},
+  {t:53,  section:"VERSE 2", main:"Your time is gone, the die is cast", sub:"The beast you woke is here at last", kicker:"VERSE 2"},
+  {t:58,  section:"VERSE 2", main:"It breathes the dark, it tastes the fear", sub:"The only sound is what you hear —", kicker:"VERSE 2"},
+  {t:64,  section:"VERSE 2", main:'(The beast!) <span class="beast">This fucking beast!</span>', sub:"You thought you’d break what can’t be tamed", kicker:"VERSE 2"},
+  {t:70,  section:"VERSE 2", main:"A savage force that has no name", sub:"It tears the weak, it claims the strong", kicker:"VERSE 2"},
+  {t:75,  section:"VERSE 2", main:"The beast you feared was here all along —", sub:'(The beast!) <b>This fucking beast!</b>', kicker:"VERSE 2"},
+  {t:81,  section:"CHORUS", main:"Don’t mistake my kindness for weakness!", sub:"The beast inside will leave you speechless!", kicker:"CHORUS", shake:true},
+  {t:87,  section:"CHORUS", main:"It’s awake, it thrives on pain —", sub:"No mercy now, the beast unchained!", kicker:"CHORUS"},
+  {t:92,  section:"CHORUS", main:'This fucking beast! (The beast!)', sub:'<span style="color:#e10600;font-weight:900">This fucking beast!</span>', kicker:"CHORUS", shake:true},
+  {t:98,  section:"BRIDGE", main:"The storm is here, the chains are dust", sub:"It feeds on greed, it lives on lust", kicker:"BRIDGE — SPOKEN"},
+  {t:103, section:"BRIDGE", main:"No salvation, no escape", sub:"The beast has come to seal your fate", kicker:"BRIDGE — SPOKEN"},
+  {t:109, section:"GUITAR SOLO", main:"🎸 DUAL GUITAR SOLO 🎸", sub:"Harmony leads • frantic shredding • wailing bends", kicker:"GUITAR SOLO", solo:true},
+  {t:124, section:"BREAKDOWN", main:"You woke the beast!", sub:"This fucking beast!", kicker:"BREAKDOWN", shake:true},
+  {t:130, section:"BREAKDOWN", main:"The shadows rise, there’s no retreat!", sub:"You woke the beast! This fucking beast!", kicker:"BREAKDOWN", shake:true},
+  {t:135, section:"BREAKDOWN", main:"Your blood will flow beneath its feet!", sub:"Guttural growls • crunching riffs • snarled repetition", kicker:"BREAKDOWN"},
+  {t:141, section:"FINAL CHORUS", main:"Don’t mistake my kindness for weakness!", sub:"The beast inside will leave you speechless!", kicker:"FINAL CHORUS", shake:true},
+  {t:147, section:"FINAL CHORUS", main:"It’s awake, it thrives on pain —", sub:"No mercy now, the beast unchained!", kicker:"FINAL CHORUS"},
+  {t:152, section:"FINAL CHORUS", main:'This fucking beast! (The beast!)', sub:'<span style="color:#e10600;font-weight:900">This fucking beast!</span>', kicker:"FINAL CHORUS", shake:true},
+  {t:158, section:"OUTRO", main:'“This... fucking... <span class="beast">beast!”</span>', sub:"Galloping riffs slow to a crushing final note, fading into distant growls", kicker:"OUTRO"},
+  {t:169, section:"OUTRO", main:"🐺 THE BEAST RESTS… FOR NOW", sub:"The Beast Unchained • DeathPiggy • Beltane Studios", kicker:"OUTRO"},
+];
+/* Beast progression: eyes → fangs → roar → chains → stage → roar */
+const BG_BY_SECTION = {
+  "INTRO":"assets/beast-eyes.jpg","VERSE 1":"assets/beast-fangs.jpg","VERSE 2":"assets/beast-fangs.jpg",
+  "CHORUS":"assets/beast-roar.jpg","FINAL CHORUS":"assets/beast-roar.jpg",
+  "BRIDGE":"assets/beast-chains.jpg","GUITAR SOLO":"assets/ember-stage.jpg",
+  "BREAKDOWN":"assets/beast-chains.jpg","OUTRO":"assets/beast-hero.jpg"
+};
+
+/* ============ STATE ============ */
+const $ = id => document.getElementById(id);
+const audio = $("audio"), stage = $("stage"), bgImg = $("bgImg");
+let playing=false, demoMode=true, demoTime=0, lastTs=null, rafId=null;
+let audioCtx=null, analyser=null, freqData=null, audioLoaded=false;
+let currentCueIdx=-1, lastShakeCue=-1, hookMode=false, nudge=0;
+
+function fmt(s){ s=Math.max(0,Math.floor(s)); return Math.floor(s/60)+":"+String(s%60).padStart(2,"0"); }
+function duration(){ return audioLoaded && isFinite(audio.duration) ? audio.duration : DEMO_DURATION; }
+function now(){ return (audioLoaded ? audio.currentTime : demoTime) + nudge; }
+
+/* ============ LYRICS LIST ============ */
+const list = $("lyricsList");
+function buildList(){
+  list.innerHTML="";
+  CUES.forEach((c,i)=>{
+    const div=document.createElement("div");
+    div.className="lyric-line"; div.dataset.i=i;
+    div.innerHTML=`<span class="t">${fmt(c.t)}</span>${c.main.replace(/<[^>]+>/g,"")}`;
+    div.onclick=()=>{ seek(c.t); };
+    list.appendChild(div);
+  });
+}
+buildList();
+function renderActive(){
+  const t=now();
+  let idx=0;
+  for(let i=0;i<CUES.length;i++){ if(t>=CUES[i].t) idx=i; }
+  document.querySelectorAll(".lyric-line").forEach(el=>{
+    el.classList.toggle("active", +el.dataset.i===idx);
+  });
+  const activeEl=list.querySelector(".lyric-line.active");
+  if(activeEl) activeEl.scrollIntoView({block:"nearest",behavior:"smooth"});
+  if(idx!==currentCueIdx){
+    currentCueIdx=idx;
+    const c=CUES[idx];
+    $("sectionTag").textContent=c.section;
+    $("lyricKicker").textContent=c.kicker||c.section;
+    $("lyricMain").innerHTML=c.main;
+    $("lyricSub").innerHTML=c.sub||"";
+    const bg=BG_BY_SECTION[c.section]||"assets/beast-hero.jpg";
+    if(bgImg.getAttribute("src")!==bg) bgImg.src=bg;
+    if(c.shake && lastShakeCue!==idx){
+      lastShakeCue=idx;
+      stage.classList.remove("shake"); void stage.offsetWidth; stage.classList.add("shake");
+      const f=$("flash"); f.style.transition="none"; f.style.opacity=".35";
+      requestAnimationFrame(()=>{ f.style.transition="opacity .4s"; f.style.opacity="0"; });
+    }
+    $("lyricMain").style.letterSpacing = c.solo ? ".06em" : "";
+  }
+  const d=duration();
+  $("progressFill").style.width=(d? (t/d*100):0)+"%";
+  $("curTime").textContent=fmt(t);
+  $("durTime").textContent=fmt(d)+(audioLoaded?"":" (demo)")+(nudge?` (nudge ${nudge>0?"+":""}${nudge.toFixed(1)}s)`:"");
+}
+
+/* ============ TRANSPORT ============ */
+function setPlaying(p){
+  playing=p;
+  $("playBtn").textContent=p?"⏸ Pause":"▶ Play";
+  if(p){
+    lastTs=null;
+    if(audioLoaded){ audio.play().catch(()=>{}); }
+    rafId=requestAnimationFrame(tick);
+  } else {
+    if(audioLoaded) audio.pause();
+    if(rafId) cancelAnimationFrame(rafId);
+  }
+}
+function tick(ts){
+  if(!playing) return;
+  if(lastTs==null) lastTs=ts;
+  const dt=(ts-lastTs)/1000; lastTs=ts;
+  if(!audioLoaded){
+    demoTime+=dt;
+    if(hookMode && demoTime>=15){ demoTime=0; }
+    if(!hookMode && demoTime>=DEMO_DURATION){ demoTime=0; }
+  } else if(hookMode && audio.currentTime>=15){
+    audio.currentTime=0;
+  }
+  renderActive();
+  rafId=requestAnimationFrame(tick);
+}
+function seek(t){
+  if(audioLoaded){ audio.currentTime=t; }
+  else { demoTime=t; }
+  currentCueIdx=-1; renderActive();
+}
+$("playBtn").onclick=()=>setPlaying(!playing);
+$("restartBtn").onclick=()=>{ seek(0); if(!playing) setPlaying(true); };
+$("hookBtn").onclick=()=>{
+  hookMode=!hookMode;
+  $("hookBtn").classList.toggle("active",hookMode);
+  if(hookMode){ seek(0); if(!playing) setPlaying(true); }
+};
+document.addEventListener("keydown",e=>{
+  if(e.code==="Space" && !/INPUT|TEXTAREA/.test(document.activeElement.tagName)){ e.preventDefault(); setPlaying(!playing); }
+});
+$("progress").onclick=e=>{
+  const r=$("progress").getBoundingClientRect();
+  const ratio=(e.clientX-r.left)/r.width;
+  seek(ratio*duration());
+};
+$("fsBtn").onclick=()=>{
+  if(document.fullscreenElement) document.exitFullscreen();
+  else stage.requestFullscreen?.();
+};
+$("vertBtn").onclick=()=>{
+  stage.classList.toggle("vertical");
+  $("vertBtn").classList.toggle("active", stage.classList.contains("vertical"));
+  sizeEmbers();
+};
+$("demoBtn").onclick=()=>{
+  demoMode=!demoMode;
+  $("demoBtn").textContent="Demo Sync: "+(demoMode?"ON":"OFF");
+  $("demoBtn").classList.toggle("active",demoMode);
+  if(!demoMode && !audioLoaded){
+    alert("Demo OFF needs audio — load your Suno export first (file or URL), then press Play.");
+    demoMode=true; $("demoBtn").textContent="Demo Sync: ON"; $("demoBtn").classList.add("active");
+  }
+};
+$("nudgeBack").onclick=()=>{ nudge=Math.round((nudge-0.5)*10)/10; currentCueIdx=-1; renderActive(); };
+$("nudgeFwd").onclick=()=>{ nudge=Math.round((nudge+0.5)*10)/10; currentCueIdx=-1; renderActive(); };
+$("srtBtn").onclick=()=>{
+  const srtTime=s=>{ const h=Math.floor(s/3600),m=Math.floor(s%3600/60),sec=Math.floor(s%60),ms=Math.floor((s%1)*1000);
+    return `${String(h).padStart(2,"0")}:${String(m).padStart(2,"0")}:${String(sec).padStart(2,"0")},${String(ms).padStart(3,"0")}`; };
+  let out="";
+  CUES.forEach((c,i)=>{
+    const end=(i+1<CUES.length)?CUES[i+1].t:c.t+6;
+    out+=`${i+1}\n${srtTime(c.t+nudge)} --> ${srtTime(end+nudge)}\n${c.main.replace(/<[^>]+>/g,"")}\n\n`;
+  });
+  const a=document.createElement("a");
+  a.href=URL.createObjectURL(new Blob([out],{type:"text/plain"}));
+  a.download="the-beast-unchained.srt"; a.click();
+};
+
+/* ============ AUDIO LOADING + VISUALIZER ============ */
+function setupAudio(src, label){
+  audio.src=src; audioLoaded=true; demoMode=false;
+  $("demoBtn").textContent="Demo Sync: OFF"; $("demoBtn").classList.remove("active");
+  $("audioStatus").innerHTML="Loaded: <b>"+label+"</b> — true sync + visualizer active. Press Play. Nudge with −0.5s / +0.5s until words land.";
+  try{
+    if(!audioCtx){
+      audioCtx=new (window.AudioContext||window.webkitAudioContext)();
+      const srcNode=audioCtx.createMediaElementSource(audio);
+      analyser=audioCtx.createAnalyser(); analyser.fftSize=256;
+      srcNode.connect(analyser); analyser.connect(audioCtx.destination);
+      freqData=new Uint8Array(analyser.frequencyBinCount);
+    }
+    if(audioCtx.state==="suspended") audioCtx.resume();
+  }catch(err){ console.warn("Visualizer unavailable:",err); }
+  audio.onloadedmetadata=()=>{ currentCueIdx=-1; renderActive(); };
+  audio.onended=()=>{ if(!hookMode) setPlaying(false); };
+}
+$("audioFile").addEventListener("change",e=>{
+  const f=e.target.files[0]; if(!f) return;
+  setupAudio(URL.createObjectURL(f), f.name);
+});
+$("loadUrlBtn").onclick=()=>{
+  const u=$("audioUrl").value.trim(); if(!u) return alert("Paste an audio URL first.");
+  setupAudio(u, u.split("/").pop()||"audio URL");
+};
+
+/* ============ EMBER PARTICLES ============ */
+const ec=$("embers"), ectx=ec.getContext("2d");
+let embers=[];
+function sizeEmbers(){ ec.width=stage.clientWidth; ec.height=stage.clientHeight; }
+function initEmbers(){
+  sizeEmbers();
+  embers=Array.from({length:70},()=>({
+    x:Math.random()*ec.width, y:Math.random()*ec.height,
+    r:Math.random()*2.2+.6, s:Math.random()*.9+.25, drift:(Math.random()-.5)*.4,
+    hue:Math.random()<.7? "255,106,0" : "255,179,71", a:Math.random()*.7+.25
+  }));
+}
+function drawEmbers(){
+  ectx.clearRect(0,0,ec.width,ec.height);
+  for(const p of embers){
+    p.y-=p.s; p.x+=p.drift+Math.sin(p.y*.02)*.3;
+    if(p.y<-6){ p.y=ec.height+6; p.x=Math.random()*ec.width; }
+    const flicker=.6+.4*Math.sin(Date.now()*.004+p.x);
+    ectx.beginPath(); ectx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    ectx.fillStyle=`rgba(${p.hue},${p.a*flicker})`;
+    ectx.shadowColor=`rgba(${p.hue},.9)`; ectx.shadowBlur=8;
+    ectx.fill(); ectx.shadowBlur=0;
+  }
+  requestAnimationFrame(drawEmbers);
+}
+window.addEventListener("resize",()=>{ sizeEmbers(); });
+initEmbers(); drawEmbers();
+
+/* ============ GALLOP VISUALIZER ============ */
+const vc=$("viz"), vctx=vc.getContext("2d");
+function drawViz(){
+  const W=vc.width,H=vc.height;
+  vctx.clearRect(0,0,W,H);
+  vctx.fillStyle="#070708"; vctx.fillRect(0,0,W,H);
+  let vals=[];
+  if(analyser && playing){
+    analyser.getByteFrequencyData(freqData);
+    for(let i=0;i<48;i++) vals.push(freqData[Math.floor(i*1.4)]/255);
+  } else {
+    const t=now();
+    for(let i=0;i<48;i++){
+      const gallop = Math.abs(Math.sin(t*6 + i*.55));
+      const pulse = playing ? gallop : .12+.05*Math.sin(t*2+i);
+      vals.push(pulse*(0.35+0.65*Math.abs(Math.sin(i*.35+t*.7))));
+    }
+  }
+  const bw=W/48;
+  vals.forEach((v,i)=>{
+    const h=Math.max(3,v*(H-10));
+    const g=vctx.createLinearGradient(0,H-h,0,H);
+    g.addColorStop(0,"#ffb347"); g.addColorStop(.5,"#ff6a00"); g.addColorStop(1,"#e10600");
+    vctx.fillStyle=g;
+    vctx.fillRect(i*bw+1,H-h,bw-2,h);
+  });
+  requestAnimationFrame(drawViz);
+}
+drawViz();
+
+renderActive();
+</script>
+</body>
+</html>
